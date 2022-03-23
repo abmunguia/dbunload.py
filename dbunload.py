@@ -3,11 +3,11 @@
 """
 Python script to receive a SQL file and an output path, to execute Oracle and dump query into a file with results.
 
-Abel Abraham Munguia.
+Abel Abraham Munguia
 abmurz@gmail.com
 
 Versions:
-1.0 - 2022-02-27 | Initial.
+1.0 - 2022-03-23 | Initial.
 """
 
 # Import common libraries
@@ -203,7 +203,7 @@ def main():
     dbunload = DBUnload()
 
     # Declare arguments text
-    dbunload.set_arguments("Parameters to generate PSV file:")
+    dbunload.set_arguments("Parameters to generate CSV file:")
 
     # Declare mandatory query file argument
     dbunload.add_argument("--sql_file", True, str, "SQL input file")
