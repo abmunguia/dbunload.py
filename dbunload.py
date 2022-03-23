@@ -230,7 +230,7 @@ def main():
     dbunload.add_argument("--output_line_terminator", False, str, "Output format line terminator")
 
     # Declare optional
-    dbunload.add_argument("--output_quoting", False, str, "Output format quoting (QUOTE_ALL = 1, QUOTE_MINIMAL = 0, QUOTE_NONE = 3, QUOTE_NONNUMERIC = 2)")
+    dbunload.add_argument("--output_quoting", False, int, "Output format quoting (QUOTE_ALL = 1, QUOTE_MINIMAL = 0, QUOTE_NONE = 3, QUOTE_NONNUMERIC = 2)")
 
     # Declare optional
     dbunload.add_argument("--output_escape_char", False, str, "Output format escape char")
