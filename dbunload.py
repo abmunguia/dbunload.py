@@ -87,12 +87,12 @@ class DBUnload:
                                              doublequote=self.output_double_quote)
 
         # Open output path for writing, specify new line delimiter
-        with open(self.arguments.output_file, mode, newline='\n') as output_file:
+        with open(self.arguments.output_file, mode, newline=self.output_line_terminator) as output_file:
             # Declare writer
-            psv_writer = csv.writer(output_file, dialect="your_dialect")
+            csv_writer = csv.writer(output_file, dialect="your_dialect")
 
             # Write row(s)
-            psv_writer.writerows(rows) if multiple is True else psv_writer.writerow(rows)
+            csv_writer.writerows(rows) if multiple is True else csv_writer.writerow(rows)
 
     def set_oracle_optional_args(self, query):
         """
